@@ -16,9 +16,10 @@ interface MonitoringSectionProps {
   title: string;
   icon: React.ReactNode;
   fields: Field[];
+  pieChartTitle?: string;
 }
 
-const MonitoringSection = ({ title, icon, fields }: MonitoringSectionProps) => {
+const MonitoringSection = ({ title, icon, fields, pieChartTitle = "业务票数分布" }: MonitoringSectionProps) => {
   const [activeTab, setActiveTab] = useState(fields[0]?.key || "");
 
   const barChartData = useMemo(() => generateBarChartData(activeTab), [activeTab]);
@@ -99,7 +100,7 @@ const MonitoringSection = ({ title, icon, fields }: MonitoringSectionProps) => {
                 <div className="flex items-center gap-2 mb-4">
                   <FileSpreadsheet className="h-4 w-4 text-primary" />
                   <h3 className="font-medium text-foreground">
-                    业务票数分布
+                    {pieChartTitle}
                   </h3>
                 </div>
                 <TimelinessPieChart data={pieChartData} />

@@ -29,6 +29,7 @@ const Index = () => {
           title="装箱信息录入时效监控"
           icon={<Package className="h-5 w-5 text-primary" />}
           fields={loadingFields}
+          pieChartTitle="箱个数分布"
         />
       </main>
     </div>
