@@ -1,14 +1,14 @@
 // Mock data for the dashboard
 
 export const suppliers = [
-  "东方海运",
-  "远洋物流",
-  "中海集运",
-  "马士基",
-  "达飞轮船",
-  "长荣海运",
-  "阳明海运",
-  "万海航运",
+  "货代1",
+  "货代2",
+  "货代3",
+  "货代4",
+  "货代5",
+  "货代6",
+  "货代7",
+  "货代8",
 ];
 
 // Booking info fields
@@ -27,7 +27,7 @@ export const loadingFields = [
   { key: "licensePlate", label: "车牌号" },
   { key: "containerNo", label: "箱号" },
   { key: "sealNo", label: "封号" },
-  { key: "phoneNo", label: "手机号" },
+  { key: "driverPhone", label: "司机手机号" },
 ];
 
 // Generate random timeliness data for bar chart
